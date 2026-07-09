@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================
+   CSS CUSTOM PROPERTIES
+   ================================================ */
+:root {
+  --bg-primary: #ECE6D8;
+  --bg-secondary: #F5F2EC;
+  --text-primary: #2E2E2E;
+  --border-subtle: #C8C2B4;
+  --accent: #8B7D6B;
+  --accent-light: #A69880;
+
+  /* Helvetica system font stack */
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ================================================
+   BASE RESET
+   ================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+    font-size: 16px;
+  }
+}
+
+/* ================================================
+   CUSTOM CURSOR
+   ================================================ */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--text-primary);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.cursor-ring.hover {
+  width: 52px;
+  height: 52px;
+  border-color: var(--accent);
+}
+
+/* ================================================
+   PAPER TEXTURE BACKGROUND
+   ================================================ */
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.35;
+}
+
+/* Engineering grid */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(46, 46, 46, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 46, 46, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ================================================
+   LAYOUT
+   ================================================ */
+.container-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+@media (max-width: 1024px) {
+  .container-main { padding: 0 40px; }
+}
+
+@media (max-width: 768px) {
+  .container-main { padding: 0 24px; }
+}
+
+/* ================================================
+   TYPOGRAPHY UTILITIES
+   ================================================ */
+
+/* Hero headings — large, bold, sentence case */
+.heading-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+/* Section title headings (ABOUT, PROJECTS, etc.) */
+.heading-section {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+/* Role / company titles */
+.heading-sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+/* Mono label: 001/, dates, etc. */
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ================================================
+   SECTION BASE
+   ================================================ */
+.section-base {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .section-base { padding: 80px 0; }
+}
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: 1px solid var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  cursor: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn-outline:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .btn-outline { cursor: pointer; font-size: 0.95rem; }
+}
+
+/* ================================================
+   NAVIGATION
+   ================================================ */
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 1;
+}
+
+.nav-link .nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  opacity: 0.8;
+  margin-right: 2px;
+}
+
+.nav-link .nav-label {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* ================================================
+   SCROLLBAR
+   ================================================ */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-subtle); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ================================================
+   SELECTION
+   ================================================ */
+::selection {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* ================================================
+   SMOOTH SCROLL (Lenis)
+   ================================================ */
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ================================================
+   MAGNETIC BUTTON
+   ================================================ */
+.magnetic-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+/* ================================================
+   MOBILE MENU
+   ================================================ */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* ================================================
+   SKILLS GRID
+   ================================================ */
+.skill-tag {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(139,125,107,0.12);
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* ================================================
+   EXPERIENCE TIMELINE
+   ================================================ */
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-subtle);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -4px;
+  top: 28px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--text-primary);
+  background: var(--bg-primary);
+  transition: background 0.3s ease;
+}
+
+/* ================================================
+   PROJECT CARDS
+   ================================================ */
+.project-card {
+  border: 1px solid var(--border-subtle);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  cursor: none;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--text-primary);
+  transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.project-card:hover::before { width: 100%; }
+.project-card:hover { border-color: var(--accent); }
+
+/* ================================================
+   MODAL
+   ================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(46, 46, 46, 0.45);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.modal-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(720px, 100vw);
+  background: var(--bg-secondary);
+  z-index: 201;
+  overflow-y: auto;
+  padding: 64px 56px;
+}
+
+@media (max-width: 768px) {
+  .modal-panel { padding: 48px 24px; }
+}
+
+/* ================================================
+   CERT CARDS
+   ================================================ */
+.cert-card {
+  border: 1px solid var(--border-subtle);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+.cert-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cert-card:hover::after { transform: scaleX(1); }
+
+/* ================================================
+   FOOTER
+   ================================================ */
+.footer-base {
+  border-top: 1px solid var(--border-subtle);
+  padding: 40px 0;
+}
+
+/* ================================================
+   RESPONSIVE MOBILE OVERRIDES
+   ================================================ */
+@media (max-width: 768px) {
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="gridTemplateColumns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  [style*="grid-template-columns: 1fr 2fr"],
+  [style*="gridTemplateColumns: 1fr 2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  [style*="grid-template-columns: repeat(3, 1fr)"],
+  [style*="gridTemplateColumns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .heading-section {
+    font-size: clamp(2rem, 14vw, 3rem);
+  }
+
+  .heading-hero {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .modal-panel { width: 100vw; padding: 40px 20px; }
+  .project-card { padding: 28px; }
+  .cert-card { padding: 28px; }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .heading-section { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+  .heading-hero { font-size: clamp(2.2rem, 4.5vw, 4rem); }
+}
+
+/* ================================================
+   TEXT REVEAL ANIMATION
+   ================================================ */
+.text-reveal-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+.text-reveal-inner {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.text-reveal-inner.revealed {
+  transform: translateY(0);
+}
