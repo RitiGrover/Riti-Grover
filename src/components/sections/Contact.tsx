@@ -12,13 +12,13 @@ const contactItems = [
   },
   {
     label: 'LINKEDIN',
-    value: 'linkedin.com/in/arohmaurya',
+    value: 'linkedin.com/in/ritigrover',
     href: personal.linkedin,
     display: 'LINKEDIN ↗',
   },
   {
     label: 'GITHUB',
-    value: 'github.com/aroh3006',
+    value: 'github.com/RitiGrover',
     href: personal.github,
     display: 'GITHUB ↗',
   },
@@ -87,7 +87,7 @@ export default function Contact() {
                 maxWidth: 340,
               }}
             >
-              Open to conversations about cybersecurity, interesting problems, and opportunities worth exploring.
+              Open to conversations about technology, interesting problems, and opportunities worth exploring.
             </motion.p>
           </div>
 

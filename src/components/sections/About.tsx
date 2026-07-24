@@ -86,6 +86,12 @@ export default function About() {
                   ))}
                 </div>
               </div>
+              <div>
+                <p className="label-mono" style={{ marginBottom: 8 }}>LANGUAGES</p>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--text-primary)', fontWeight: 400 }}>
+                  {about.languages}
+                </p>
+              </div>
             </motion.div>
           </motion.div>
         </div>

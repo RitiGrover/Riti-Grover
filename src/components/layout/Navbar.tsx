@@ -77,8 +77,9 @@ export default function Navbar() {
               transition: 'opacity 0.2s ease',
               display: 'block',
               lineHeight: 1.15,
+              textAlign: 'left',
             }}>
-              AROH<br />MAURYA
+              RITI<br />GROVER
             </span>
           </button>
 
@@ -86,11 +87,11 @@ export default function Navbar() {
           <nav
             style={{
               border: '1px solid var(--border-subtle)',
-              padding: '10px 28px',
+              padding: '10px 20px',
             }}
             aria-label="Main navigation"
           >
-            <ul className="flex items-center" style={{ gap: 28 }}>
+            <ul className="flex items-center" style={{ gap: 16 }}>
               {navItems.map((item) => (
                 <li key={item.id}>
                   <button
@@ -107,16 +108,8 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          {/* Resume and Writeups */}
+          {/* Resume */}
           <div className="flex items-center" style={{ gap: 16 }}>
-            <a
-              href="/writeups.html"
-              className="btn-outline"
-              style={{ cursor: 'none' }}
-              aria-label="View Writeups"
-            >
-              WRITEUPS
-            </a>
             <a
               href={personal.resume}
               download
@@ -157,7 +150,7 @@ export default function Navbar() {
               color: 'var(--text-primary)',
             }}
           >
-            AROH MAURYA
+            RITI GROVER
           </button>
 
           <button
@@ -204,9 +197,6 @@ export default function Navbar() {
               </ul>
             </nav>
             <div style={{ position: 'absolute', bottom: 40, left: 40, right: 40, display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <a href="/writeups.html" className="btn-outline" style={{ cursor: 'auto', width: '100%', justifyContent: 'center' }}>
-                WRITEUPS
-              </a>
               <a href={personal.resume} download className="btn-outline" style={{ cursor: 'auto', width: '100%', justifyContent: 'center' }}>
                 DOWNLOAD RESUME
               </a>

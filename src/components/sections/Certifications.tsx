@@ -68,23 +68,11 @@ export default function Certifications() {
                 flexDirection: 'column',
               }}
             >
-              {/* Abbreviation watermark */}
-              <div style={{
-                position: 'absolute',
-                top: 24,
-                right: 24,
-                fontFamily: 'var(--font-display)',
-                fontWeight: 900,
-                fontSize: '4rem',
-                color: 'var(--border-subtle)',
-                lineHeight: 1,
-                letterSpacing: '-0.03em',
-                userSelect: 'none',
-              }}>
-                {cert.abbreviation}
-              </div>
 
-              <p className="label-mono" style={{ marginBottom: 20 }}>{cert.issuer} / {cert.year}</p>
+
+              <p className="label-mono" style={{ marginBottom: 20, maxWidth: '60%', position: 'relative', zIndex: 1 }}>
+                {cert.issuer} / {cert.year}
+              </p>
 
               <h3 style={{
                 fontFamily: 'var(--font-display)',

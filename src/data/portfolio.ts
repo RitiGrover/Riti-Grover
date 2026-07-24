@@ -3,284 +3,251 @@
 // ============================================================
 
 export const personal = {
-  name: "AROH MAURYA",
-  title: "Computer Science (Cyber Security) Undergraduate",
+  name: "RITI GROVER",
+  title: "Computer Science (Information Technology) Undergraduate",
   institution: "Manipal Institute of Technology, Bengaluru",
-  email: "aroh3006@gmail.com",
-  linkedin: "https://www.linkedin.com/in/arohmaurya/",
-  github: "https://github.com/aroh3006",
-  resume: "/Aroh Maurya Resume.pdf",
+  email: "ritigrover1@gmail.com",
+  linkedin: "https://www.linkedin.com/in/ritigrover/",
+  github: "https://github.com/RitiGrover",
+  resume: "/resume.pdf",
 };
 
 export const heroPrimary = [
-  "Building secure digital systems",
-  "through cybersecurity, software engineering,",
-  "and real-world problem solving.",
+  "Engineering scalable software",
+  "through AI, data,",
+  "and modern computing.",
 ];
 
 export const heroSecondary = [
-  "Passionate about application security,",
-  "vulnerability assessment and",
-  "ethical hacking.",
+  "Building intelligent applications,",
+  "conducting AI research, and transforming",
+  "complex ideas into practical, scalable solutions.",
 ];
 
 export const about = {
-  summary: `Cybersecurity-focused Computer Science undergraduate specializing in vulnerability assessment, endpoint security, and secure software development. Experienced in security testing, API assessment, and building practical cybersecurity tools.
+  summary: `I am a Computer Science undergraduate at Manipal Institute of Technology with a strong interest in artificial intelligence, software engineering, and modern application development. Through research at IIT Roorkee and hands-on projects, I have worked on graph neural networks, deep learning, constraint-based optimization, and full-stack applications, transforming complex ideas into practical, scalable solutions.
 
-Beyond technology, I bring strong leadership and communication skills enabling me to collaborate effectively with diverse teams. I am actively seeking opportunities in cybersecurity, risk analysis, and information security where I can contribute to building secure, scalable and compliant systems.`,
+Beyond academics, I have held leadership roles across multiple student organizations, strengthening my skills in communication, collaboration, and project management. I am currently seeking opportunities in software engineering, artificial intelligence, and modern application development, where I can contribute to building scalable software, intelligent systems, and impactful digital solutions.`,
+  languages: "English, Hindi",
 };
 
 export const experiences = [
   {
-    id: "adlerqa",
-    company: "AdlerQA Technologies Pvt. Ltd.",
-    role: "Cybersecurity Intern",
-    period: "June 2026 – Present",
+    id: "iit-roorkee",
+    company: "IIT Roorkee",
+    role: "Research Intern — AI-Driven Edge Computing for IoT",
+    period: "May 2025",
     description:
-      "Conducting authorized vulnerability assessments of WardenIQ. Performing API security testing using Burp Suite, and testing authentication, authorization, and session management flows. Reviewing application security against OWASP Top 10 and conducting IDOR testing and vulnerability validation.",
+      "• Researched deep learning architectures, including Transformers, and software engineering methodologies to design scalable, real-time resource-allocation solutions for IoT edge systems\n• Designed, built, and tested a hybrid machine learning and optimization framework, benchmarking alternative approaches against standard baselines to recommend the most effective solution",
     technologies: [
-      "Burp Suite",
-      "OWASP Top 10",
-      "API Security Testing",
-      "Authentication Testing",
-      "Authorization Testing",
-      "IDOR Testing",
-      "Session Management",
+      "Deep Learning",
+      "Transformers",
+      "IoT",
+      "Edge Computing",
+      "Machine Learning",
+      "Optimization",
     ],
-    certificate: "/certificates/adlerqa-internship.pdf",
   },
   {
-    id: "internloom",
-    company: "InternLoom",
-    role: "Intern",
-    period: "2025",
+    id: "luscious-leopard",
+    company: "Luscious Leopard",
+    role: "Creative Intern",
+    period: "May 2025",
     description:
-      "• Grew engagement by 3× and followers by 40% over six months through a consistent cross-platform strategy across LinkedIn, Instagram and YouTube.\n• Led content calendar planning using trend forecasting, hashtag analysis and AI-assisted copywriting.\n• Managed and coordinated the content team to ensure consistent delivery and audience growth.",
-    technologies: [],
-    certificate: "/certificates/internloom-internship.pdf",
+      "• Redesigned website frontend layouts and produced Instagram and website content, improving user experience and aligning visuals with brand identity",
+    technologies: [
+      "Marketing",
+      "Frontend Design",
+      "Content Creation",
+      "UI/UX",
+      "Brand Identity",
+    ],
   },
 ];
 
 export const projects = [
   {
-    id: "vigilance",
-    name: "VIGILANCE",
-    tagline: "Windows Endpoint Intrusion Detection System",
+    id: "smurfing-hunter",
+    name: "SMURFING HUNTER",
+    tagline: "Blockchain AML Intelligence Platform",
     shortDescription:
-      "A real-time endpoint monitoring system with encrypted logging, webcam evidence capture, and Telegram-based alerting.",
+      "An automated system for detecting suspicious blockchain transaction patterns and generating risk reports using graph neural networks.",
     problem:
-      "Detecting unauthorized access on Windows endpoints requires a solution that can monitor activity in real time, capture evidence, and alert administrators without relying on cloud infrastructure.",
+      "Anti-money laundering (AML) compliance teams face an overwhelming volume of blockchain transactions to analyze manually. Detecting sophisticated laundering typologies like smurfing, peeling chains, and mule networks requires pattern recognition at a scale that exceeds human capacity.",
     approach:
-      "Built a lightweight desktop application that continuously monitors endpoint activity, captures webcam frames on trigger events, encrypts all logs for integrity, and pushes instant alerts via the Telegram API — giving security teams immediate, verifiable evidence of intrusions.",
-    technologies: ["Python", "Tkinter", "OpenCV", "Cryptography", "Telegram API"],
+      "Designed and built a 3-layer Graph Convolutional Network (GCN) to classify wallet behavior, paired with a D3.js forensic dashboard featuring interactive Sankey diagrams and an automated Suspicious Activity Report (SAR) generator for real-time risk scoring.",
+    technologies: ["PyTorch Geometric", "Flask", "D3.js", "GNN", "Blockchain"],
     features: [
-      "Real-time endpoint monitoring",
-      "Encrypted log storage for evidence integrity",
-      "Webcam evidence capture on intrusion trigger",
-      "Instant Telegram alerts to administrator",
-      "Native Windows desktop application via Tkinter",
+      "3-layer GCN for wallet behavior classification",
+      "Detection of smurfing, peeling chains, and mule networks",
+      "Interactive D3.js forensic dashboard with Sankey diagrams",
+      "Automated SAR generator surfacing top 50+ high-risk anomalies per batch",
+      "Reduced manual transaction-analysis time by ~40%",
     ],
     challenges:
-      "Balancing performance overhead of continuous monitoring with the responsiveness needed for real-time detection required careful threading and resource management within the Python runtime.",
-    github: "https://github.com/aroh3006/VigiLance",
+      "Training the GCN to reliably distinguish between legitimate high-volume wallets and laundering patterns required careful feature engineering and validation across multiple transaction typologies.",
+    github: "https://github.com/RitiGrover/Smurfing-HUnters",
     demo: null,
-    category: "Security",
+    category: "AI/ML",
   },
   {
-    id: "password-auditor",
-    name: "PASSWORD SECURITY AUDITOR",
-    tagline: "Evaluate, simulate, and report on password security",
+    id: "timetable-ai",
+    name: "TIMETABLE AI",
+    tagline: "Constraint-based scheduling system for students",
     shortDescription:
-      "A desktop tool for evaluating password strength, simulating dictionary attacks, and generating security reports.",
+      "A constraint-driven platform that generates conflict-free timetables using CSP methodologies with a modular FastAPI backend.",
     problem:
-      "Weak passwords remain the most exploited attack vector. Organizations and individuals need a way to understand how their passwords hold up against real-world attack techniques before attackers find out for them.",
+      "Academic scheduling under complex dependency constraints — room availability, instructor preferences, student conflicts — is a combinatorial problem that manual approaches cannot solve reliably at scale.",
     approach:
-      "Developed a Python desktop application that applies multi-factor strength evaluation — entropy analysis, dictionary attack simulation, SHA-256 hashing — and produces structured security reports to communicate findings clearly.",
-    technologies: ["Python", "Tkinter"],
+      "Architected a modular FastAPI/Python backend implementing an optimized CSP solver with backtracking search, Minimum Remaining Values (MRV) heuristics, and forward checking, paired with a responsive HTML/CSS/JavaScript frontend for intuitive interaction.",
+    technologies: ["FastAPI", "Python", "JavaScript", "CSP", "HTML/CSS"],
     features: [
-      "Multi-factor password strength evaluation",
-      "Dictionary attack simulation against common wordlists",
-      "SHA-256 hashing for secure password representation",
-      "Detailed security reporting with recommendations",
+      "Constraint Satisfaction Problem (CSP) solver for robust scheduling",
+      "Backtracking search with MRV heuristics and forward checking",
+      "Modular backend with separated solver, graph, and metrics components",
+      "Responsive HTML/CSS/JavaScript frontend",
+      "Conflict-free timetable generation under complex constraints",
     ],
     challenges:
-      "Designing the dictionary attack simulation to be realistic enough to be meaningful while staying within ethical boundaries and reasonable runtime required careful scope definition.",
-    github: "https://github.com/aroh3006/Password-Auditing-Tool",
+      "Balancing solver performance with constraint complexity required iterating on heuristic strategies and implementing forward checking to prune the search space without sacrificing solution quality.",
+    github: "https://github.com/RitiGrover/Timetable-AI",
     demo: null,
-    category: "Security",
-  },
-  {
-    id: "port-scanner",
-    name: "PORT SCANNER",
-    tagline: "Fast, configurable network reconnaissance tool",
-    shortDescription:
-      "A desktop-based port scanner with quick scan, full scan, service detection, and report generation.",
-    problem:
-      "Understanding an organization's exposed attack surface starts with mapping open ports and running services — a foundational step in any authorized security assessment that most tooling makes inaccessible to beginners.",
-    approach:
-      "Built a Python desktop application wrapping Nmap with a clean Tkinter interface, offering Quick Scan and Full Scan modes, service version detection, and structured report export — making network reconnaissance accessible without sacrificing accuracy.",
-    technologies: ["Python", "Tkinter", "Nmap"],
-    features: [
-      "Quick Scan and Full Scan modes",
-      "Service version detection via Nmap integration",
-      "Clean desktop interface via Tkinter",
-      "Structured report generation for documentation",
-    ],
-    challenges:
-      "Abstracting Nmap's output parsing into a reliable, readable data model required handling edge cases across different OS environments and Nmap versions.",
-    github: "https://github.com/aroh3006/Port-Scanner",
-    demo: null,
-    category: "Security",
+    category: "Software",
   },
 ];
 
 export const certifications = [
   {
-    id: "ceh",
-    name: "Certified Ethical Hacker",
-    issuer: "EC-Council",
-    abbreviation: "CEH",
+    id: "data-analytics",
+    name: "Data Analytics Foundations",
+    issuer: "DeepLearning.AI",
     year: "2025",
-    credentialId: "", // ← Add your CEH credential ID if available
-    image: "/certificates/ceh.pdf",
+    credentialId: "",
+    image: "/certificates/data-analytics.pdf",
     description:
-      "Industry-recognized certification validating skills in ethical hacking, penetration testing, and cybersecurity defense methodologies across 20 domains.",
+      "Foundational concepts in data analytics, covering data collection, processing, visualization, and deriving actionable insights.",
   },
   {
-    id: "google-cyber",
-    name: "Google Cybersecurity Professional Certificate",
-    issuer: "Google / Coursera",
-    abbreviation: "GCC",
-    year: "2024",
-    credentialId: "", // ← Add your Google credential ID if available
-    image: "/certificates/google-cybersecurity.pdf",
+    id: "java-fundamentals",
+    name: "Fundamentals of Java Programming",
+    issuer: "Board Infinity",
+    year: "2025",
+    credentialId: "",
+    image: "/certificates/java-fundamentals.pdf",
     description:
-      "Comprehensive program covering foundations of cybersecurity, network security, Linux, SQL, Python for automation, and security information and event management (SIEM).",
+      "Core Java programming concepts including object-oriented design, data structures, and application development fundamentals.",
   },
   {
-    id: "ibm-soc",
-    name: "Security Operations Center in Practice",
+    id: "ibm-databases",
+    name: "Integrating with Structured Databases",
     issuer: "IBM SkillsBuild",
-    abbreviation: "SOC",
-    year: "2024",
+    year: "2025",
     credentialId: "",
-    image: "/certificates/security-operations-center.pdf",
-    description: "Foundational knowledge and practical skills for working in a Security Operations Center.",
+    image: "/certificates/ibm-databses.pdf",
+    description:
+      "Practical skills for integrating applications with structured databases, covering SQL, schema design, and data management.",
   },
   {
-    id: "ibm-cloud",
-    name: "Cloud Computing Fundamentals",
+    id: "ibm-linux",
+    name: "Linux on IBM LinuxONE",
     issuer: "IBM SkillsBuild",
-    abbreviation: "CCF",
-    year: "2024",
+    year: "2025",
     credentialId: "",
-    image: "/certificates/cloud-computing-fundamentals.pdf",
-    description: "Core concepts of cloud computing, deployment models, and architecture.",
-  },
-
-  {
-    id: "uiuc-ods",
-    name: "Ordered Data Structures",
-    issuer: "University of Illinois Urbana-Champaign",
-    abbreviation: "ODS",
-    year: "2023",
-    credentialId: "",
-    image: "/certificates/ordered-data-structures.pdf",
-    description: "Advanced data structures, algorithmic analysis, and implementation.",
-  },
-  {
-    id: "umich-lpt",
-    name: "Leading People and Teams",
-    issuer: "University of Michigan",
-    abbreviation: "LPT",
-    year: "2023",
-    credentialId: "",
-    image: "/certificates/leading-people-and-teams.pdf",
-    description: "Essential skills for leading diverse teams and effective communication.",
-  },
-  {
-    id: "mastercard-forage",
-    name: "Forage Cybersecurity Job Simulation",
-    issuer: "Mastercard",
-    abbreviation: "MC",
-    year: "2023",
-    credentialId: "",
-    image: "/certificates/mastercard-forage.pdf",
-    description: "Practical simulation of cybersecurity tasks and real-world scenarios.",
+    image: "/certificates/ibm-linux.pdf",
+    description:
+      "Linux administration and operations on IBM LinuxONE platform, covering system management and enterprise deployment.",
   },
 ];
 
 export const leadership = [
   {
-    role: "Member",
-    organization: "Placement Committee — MIT Bengaluru",
-    period: "2024 – Present",
+    role: "Vice President",
+    organization: "LitSoc — Literature Society",
+    period: "2024 – 2026",
     description:
-      "Active member of the Placement Committee at MIT Bengaluru, facilitating recruitment processes, coordinating with companies, and ensuring a smooth placement experience for students.",
+      "Leading the Literature Society at MIT Bengaluru — organizing literary events, managing the team, and fostering a culture of creative expression and intellectual discussion across campus.",
   },
   {
-    role: "President",
-    organization: "Pop Culture Club (OtakuSpot)",
-    period: "2024 – 2025",
+    role: "Social Media Manager",
+    organization: "OtakuSpot — Pop Culture Club",
+    period: "2024 – 2026",
     description:
-      "Led the Pop Culture Club at MIT Bengaluru — organizing events, managing the team, and growing the community across campus.",
+      "Managing social media strategy and content creation for OtakuSpot, driving engagement and community growth through consistent, creative cross-platform content.",
   },
   {
-    role: "Vice Captain",
-    organization: "Aries — General Championship",
-    period: "2024 – 2025",
+    role: "Executive Member",
+    organization: "IEEE Computer Society",
+    period: "2024 – 2026",
     description:
-      "Served as Vice Captain of Aries in the General Championship. Secured 1st position in the General Championship by contributing to team strategy, coordination, and competitive performance.",
+      "Contributing to IEEE Computer Society activities at MIT Bengaluru — organizing technical events, workshops, and fostering professional development among members.",
   },
   {
-    role: "Founding Team",
-    organization: "Google Developer Student Clubs (GDSC)",
-    period: "2023",
+    role: "Organising Committee",
+    organization: "TechSolstice — Technical Fest",
+    period: "2024 – 2026",
     description:
-      "Part of the founding team that established the GDSC chapter at MIT Bengaluru — building the community infrastructure, organizing the first events, and setting the culture from the ground up.",
+      "Part of the organising committee for TechSolstice, MIT Bengaluru's technical fest — coordinating logistics, event planning, and ensuring smooth execution of technical competitions and workshops.",
+  },
+  {
+    role: "Content Writer",
+    organization: "PCB — Photography Club",
+    period: "2024 – 2026",
+    description:
+      "Creating written content for the Photography Club at MIT Bengaluru — crafting event descriptions, social media copy, and editorial pieces that complement visual storytelling.",
   },
   {
     role: "Marketing Team",
-    organization: "Falak",
-    period: "2023 – 2024",
+    organization: "Radar — Robotics Club",
+    period: "2024 – 2026",
     description:
-      "Drove visibility and engagement for Falak, the cultural fest of MIT Bengaluru, through strategic outreach, event promotion, and content — expanding the organization's reach.",
-  },
-  {
-    role: "Captain",
-    organization: "Dr. Virendra Swarup Education Centre",
-    period: "2021 – 2022",
-    description:
-      "Captain of the school basketball team, leading strategy, team development, and competitive performance at the institutional level.",
+      "Driving visibility and engagement for Radar, the Robotics Club at MIT Bengaluru, through strategic outreach, event promotion, and content — expanding the club's reach across campus.",
   },
 ];
 
 export const skills = {
-  Programming: ["Python", "Java", "C", "SQL", "HTML/CSS"],
-  Cybersecurity: [
-    "VAPT",
-    "Burp Suite",
-    "OWASP Top 10",
-    "API Security",
-    "IDOR Testing",
-    "Endpoint Security",
-    "Cryptography",
-    "Network Reconnaissance",
+  "Technical Skills": [
+    "Python",
+    "Java",
+    "FastAPI",
+    "Flask",
+    "PyTorch Geometric",
+    "D3.js",
+    "Graph Neural Networks",
+    "Transformers",
+    "Constraint Satisfaction Problems",
+    "SQL",
+    "HTML/CSS",
+    "Data Analysis",
+    "Data Visualization",
+    "Git",
+    "Excel",
+    "C",
   ],
-  Tools: ["Wireshark", "Docker", "Git", "Nmap", "Linux", "Windows", "FastAPI", "OpenCV"],
+  "Core Competencies": [
+    "Leadership",
+    "Team Management",
+    "Strategic Thinking",
+    "Communication",
+    "Public Speaking",
+    "Event Planning",
+    "Marketing",
+    "Content Strategy",
+    "Adaptability",
+    "Creativity",
+  ],
 };
 
 export const education = [
   {
     institution: "Manipal Institute of Technology",
-    degree: "B.Tech in Computer Science (Cyber Security)",
+    degree: "B.Tech in Computer Science (Information Technology), CGPA: 8.70",
     location: "Bengaluru, Karnataka",
-    period: "2023–2027",
+    period: "2024–2028",
   },
   {
-    institution: "Dr. Virendra Swarup Education Centre",
-    degree: "ICSE, PCM with Computer Science",
-    location: "Kanpur, Uttar Pradesh",
-    period: "2010–2022",
-  }
+    institution: "RS Memorial Higher Secondary School",
+    degree: "PCM — Class XII: 81%",
+    location: "Katni, Madhya Pradesh",
+    period: "2023–2024",
+  },
 ];

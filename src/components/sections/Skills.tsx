@@ -29,10 +29,10 @@ export default function Skills() {
           ref={ref}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '60px',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '80px',
           }}
-          className="grid-cols-1 md:grid-cols-3"
+          className="grid-cols-1 md:grid-cols-2"
         >
           {categories.map((category, catIdx) => (
             <motion.div
@@ -49,15 +49,15 @@ export default function Skills() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   color: 'var(--text-primary)',
-                  marginBottom: 20,
-                  paddingBottom: 12,
+                  marginBottom: 24,
+                  paddingBottom: 14,
                   borderBottom: '1px solid var(--border-subtle)',
                 }}
               >
                 {category}
               </p>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                 {skills[category].map((skill, skillIdx) => (
                   <motion.span
                     key={skill}

@@ -101,25 +101,29 @@ export default function Experience() {
                       transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                       style={{ overflow: 'hidden' }}
                     >
-                      <p style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '1rem',
-                        lineHeight: 1.75,
-                        color: 'var(--text-primary)',
-                        fontWeight: 400,
+                      <ul style={{
+                        listStyle: 'none',
+                        padding: 0,
+                        margin: 0,
                         marginTop: 20,
                         marginBottom: 20,
-                        whiteSpace: 'pre-line',
                       }}>
-                        {exp.description}
-                      </p>
-                      {(exp as any).certificate && (
-                        <div style={{ marginBottom: 20 }}>
-                          <a href={(exp as any).certificate} target="_blank" rel="noreferrer" className="btn-outline" style={{ fontSize: '0.75rem', padding: '8px 16px', cursor: 'none' }}>
-                            VIEW CERTIFICATE ↗
-                          </a>
-                        </div>
-                      )}
+                        {exp.description.split('\n').filter(Boolean).map((line, idx) => (
+                          <li key={idx} style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '1rem',
+                            lineHeight: 1.75,
+                            color: 'var(--text-primary)',
+                            fontWeight: 400,
+                            paddingLeft: 20,
+                            textIndent: -20,
+                            marginBottom: 8,
+                          }}>
+                            {line.trim()}
+                          </li>
+                        ))}
+                      </ul>
+
                       {exp.technologies.length > 0 && (
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                           {exp.technologies.map((tech) => (
