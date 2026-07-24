@@ -40,10 +40,6 @@ export default function Navbar() {
 
   const handleNav = (id: string) => {
     setMobileOpen(false);
-    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-      window.location.href = `/#${id}`;
-      return;
-    }
     setTimeout(() => scrollToSection(id), 50);
   };
 
