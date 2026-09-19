@@ -8,10 +8,20 @@ export default function Projects() {
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 
-  // Lock scroll when modal open
+  // Lock Lenis smooth scroll when modal open
   React.useEffect(() => {
-    document.body.style.overflow = activeProject ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    const lenis = (window as any).__lenis;
+    if (activeProject) {
+      lenis?.stop();
+      document.body.style.overflow = 'hidden';
+    } else {
+      lenis?.start();
+      document.body.style.overflow = '';
+    }
+    return () => {
+      lenis?.start();
+      document.body.style.overflow = '';
+    };
   }, [activeProject]);
 
   return (

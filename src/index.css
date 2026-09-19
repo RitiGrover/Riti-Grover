@@ -386,6 +386,7 @@ html.lenis { height: auto; }
   background: rgba(46, 46, 46, 0.45);
   z-index: 200;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .modal-panel {
@@ -397,7 +398,10 @@ html.lenis { height: auto; }
   background: var(--bg-secondary);
   z-index: 201;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 64px 56px;
+  isolation: isolate;
+  box-shadow: -8px 0 40px rgba(46, 46, 46, 0.15);
 }
 
 @media (max-width: 768px) {

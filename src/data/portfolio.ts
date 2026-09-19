@@ -9,7 +9,7 @@ export const personal = {
   email: "ritigrover1@gmail.com",
   linkedin: "https://www.linkedin.com/in/ritigrover/",
   github: "https://github.com/RitiGrover",
-  resume: "/resume.pdf",
+  resume: `${import.meta.env.BASE_URL}resume.pdf`,
 };
 
 export const heroPrimary = [
