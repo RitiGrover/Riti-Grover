@@ -87,7 +87,7 @@ export const projects = [
     challenges:
       "Training the GCN to reliably distinguish between legitimate high-volume wallets and laundering patterns required careful feature engineering and validation across multiple transaction typologies.",
     github: "https://github.com/RitiGrover/Smurfing-HUnters",
-    demo: null,
+    demo: "https://surfing-hunter.onrender.com/index.html",
     category: "AI/ML",
   },
   {
@@ -111,7 +111,7 @@ export const projects = [
     challenges:
       "Balancing solver performance with constraint complexity required iterating on heuristic strategies and implementing forward checking to prune the search space without sacrificing solution quality.",
     github: "https://github.com/RitiGrover/Timetable-AI",
-    demo: null,
+    demo: "https://timetable-ai-cyan.vercel.app/",
     category: "Software",
   },
 ];

@@ -24,10 +24,10 @@ const contactItems = [
   },
   {
     label: 'RESUME',
-    value: 'Download PDF',
+    value: 'View / Download PDF',
     href: personal.resume,
-    display: 'RESUME ↓',
-    download: true,
+    display: 'RESUME ↗',
+    download: false,
   },
 ];
 

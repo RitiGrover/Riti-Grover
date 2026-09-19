@@ -112,20 +112,53 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* View arrow */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: 'var(--text-primary)',
-                }}>
-                  VIEW PROJECT
-                </span>
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
-                  <path d="M0 5h14M10 1l4 4-4 4" stroke="var(--text-primary)" strokeWidth="1" strokeLinecap="square"/>
-                </svg>
+              {/* View arrow + Live Demo */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.65rem',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--text-primary)',
+                  }}>
+                    VIEW PROJECT
+                  </span>
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+                    <path d="M0 5h14M10 1l4 4-4 4" stroke="var(--text-primary)" strokeWidth="1" strokeLinecap="square"/>
+                  </svg>
+                </div>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    data-cursor-hover
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.6rem',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      color: 'var(--accent)',
+                      border: '1px solid var(--border-subtle)',
+                      padding: '4px 10px',
+                      textDecoration: 'none',
+                      transition: 'color 0.2s ease, border-color 0.2s ease',
+                      cursor: 'none',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-primary)';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--text-primary)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)';
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--border-subtle)';
+                    }}
+                  >
+                    LIVE DEMO ↗
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
