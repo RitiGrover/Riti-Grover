@@ -33,6 +33,22 @@ Beyond academics, I have held leadership roles across multiple student organizat
 
 export const experiences = [
   {
+    id: "fluxton",
+    company: "Fluxton",
+    role: "AI / Backend Intern",
+    period: "Aug 2026 – Present",
+    description:
+      "• Delivering 6 REST API endpoints in Python covering the full authentication flow (Firebase login, token refresh, logout, profile) for Fluxton's EV charging mobile app\n• Designing a 3-table PostgreSQL schema (users, sessions, rate-limiting counters) and adding Firebase ID token verification with short-lived JWT access tokens (15 min) and rotating, reuse-detected refresh tokens (7-day sessions)\n• Shipping 7 commits merged through 1 pull request in the project's first week, with 2 more feature branches in review for rate limiting and Firebase Functions deployment",
+    technologies: [
+      "Python",
+      "REST APIs",
+      "PostgreSQL",
+      "Firebase",
+      "JWT",
+      "FastAPI",
+    ],
+  },
+  {
     id: "iit-roorkee",
     company: "IIT Roorkee",
     role: "Research Intern — AI-Driven Edge Computing for IoT",
